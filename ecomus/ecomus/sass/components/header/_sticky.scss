@@ -1,0 +1,136 @@
+.header-transparent {
+	.site-header__section {
+		&.minimized,
+		&.headroom--not-top {
+			.header-sticky,
+			.header-mobile-sticky {
+				position: fixed;
+				background-color: #ffffff;
+			}
+		}
+	}
+}
+
+.site-header__section {
+	&.minimized,
+	&.headroom--not-top {
+		.header-sticky,
+		.header-mobile-sticky {
+			position: fixed;
+			right: 0;
+			left: 0;
+			top: 0;
+			z-index: 899;
+			border-bottom: none;
+			max-width: 100%;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: none;
+
+			&:last-child {
+				box-shadow: 0 1px 3px rgba( 33, 37, 41, 0.1);
+			}
+		}
+
+		.header-sticky {
+			+ .header-bottom {
+				top: 85px;
+				animation-duration: .35s;
+			}
+		}
+
+		.header-mobile-sticky {
+			+ .header-mobile-bottom {
+				top: 64px;
+				animation-duration: .35s;
+			}
+		}
+	}
+
+	&.minimized {
+		.header-sticky,
+		.header-mobile-sticky {
+			animation-name: fadeInDown;
+			animation-duration: .25s;
+
+			&.header-main {
+				z-index: 900;
+			}
+		}
+	}
+
+	&.headroom--not-top {
+		.header-sticky,
+		.header-mobile-sticky {
+			width: 100%;
+			animation: none;
+		}
+
+		&.headroom--pinned {
+			.header-sticky,
+			.header-mobile-sticky {
+				opacity: 1;
+				transform: none;
+				pointer-events: auto;
+
+				&.header-main {
+					z-index: 900;
+				}
+			}
+		}
+
+		&.headroom--unpinned {
+			.header-sticky,
+			.header-mobile-sticky {
+				opacity: 0;
+				transform: translateY(-100%);
+				pointer-events: none;
+			}
+		}
+
+		&.headroom {
+			.header-sticky,
+			.header-mobile-sticky {
+				will-change: transform;
+				transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+			}
+		}
+	}
+}
+
+.header-v2 {
+	&.minimized,
+	&.headroom--not-top {
+		.header-sticky {
+			+ .header-bottom {
+				top: 67px;
+			}
+		}
+	}
+}
+
+.admin-bar {
+	.site-header__desktop {
+		&.minimized,
+		&.headroom--not-top {
+			.header-sticky {
+				top: 32px;
+
+				+ .header-bottom {
+					top: 117px;
+				}
+			}
+		}
+	}
+
+	.header-v2 {
+		&.minimized,
+		&.headroom--not-top {
+			.header-sticky {
+				+ .header-bottom {
+					top: 99px;
+				}
+			}
+		}
+	}
+}

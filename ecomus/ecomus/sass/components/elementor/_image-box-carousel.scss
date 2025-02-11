@@ -1,0 +1,111 @@
+.ecomus-image-box-carousel__heading {
+    gap: 15px;
+    margin-bottom: 33px;
+
+    .heading {
+        @include font-size(1);
+        color: var(--em-color__dark);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .swiper-arrows {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .swiper-button {
+        position: static;
+        display: inline-flex;
+        width: 30px;
+        height: 30px;
+        transform: none;
+        opacity: 1;
+
+        &.elementor-swiper-button-prev,
+        &.elementor-swiper-button-next {
+            margin: 0;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+        position: static;
+        margin: 0;
+        width: auto;
+    }
+
+    &.ecomus-image-box-carousel__heading--dots {
+        justify-content: space-between;
+    }
+}
+
+.ecomus-image-box-carousel__item-side {
+    align-items: flex-end;
+    border-radius: var(--em-image-rounded);
+    overflow: hidden;
+
+    .ecomus-image-box-carousel__summary {
+        top: 24px;
+        left: 15px;
+    }
+
+    .ecomus-image-box-carousel__title {
+        margin: 0;
+    }
+}
+
+.ecomus-image-box-carousel__image {
+    img {
+        transition: transform 2s cubic-bezier(0,0,.44,1.18);
+    }
+}
+
+.ecomus-image-box-carousel__button {
+    --em-button-padding-top: 16px;
+    --em-button-padding-right: 30px;
+    --em-button-padding-bottom: 15px;
+    --em-button-padding-left: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &.em-button-subtle,
+    &.em-button-text {
+        --em-button-padding-left: 0;
+        --em-button-padding-right: 0;
+        --em-button-padding-top: 0;
+        --em-button-padding-bottom: 3px;
+    }
+}
+
+.ecomus-image-box-carousel__button-alway {
+    width: auto;
+}
+
+.ecomus-image-box-carousel__item-below {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .ecomus-image-box-carousel__summary {
+        position: relative;
+    }
+
+    .ecomus-image-box-carousel__button {
+        position: relative;
+        margin: 22px 0 0 0;
+    }
+}
+
+.ecomus-image-box-carousel__title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    @include font-size(28/16);
+    line-height: 33.6px;
+}
+
+.ecomus-image-box-carousel__description {
+    margin-bottom: 18px;
+}

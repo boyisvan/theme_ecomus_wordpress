@@ -1,0 +1,83 @@
+.ecomus-subscribe-box__content {
+	.mc4wp-form-fields {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			font-weight: 600;
+		}
+
+		.ecomus-svg-icon {
+			display: none;
+		}
+	}
+
+	input[type="email"] {
+		margin-bottom: 20px;
+	}
+
+	&.ecomus-subscribe-box__type-row {
+		--em-input-padding-y: 1.1rem;
+
+		.mc4wp-form-fields {
+			position: relative;
+
+			.ecomus-svg-icon {
+				display: block;
+			}
+		}
+
+		input[type="email"] {
+			width: 100%;
+			margin-bottom: 0;
+			padding-right: 133px;
+		}
+
+		button,
+		input[type="submit"] {
+			--em-button-padding-top: 12px;
+			--em-button-padding-bottom: 12px;
+			--em-button-padding-right: 18px;
+			--em-button-padding-left: 18px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 8px;
+		}
+
+		p {
+			margin-top: 0;
+		}
+	}
+}
+
+.ecomus-subscribe-box__title {
+	@include font-size(18/16);
+	color: var(--em-heading-color);
+	margin: 0 0 25px;
+}
+
+.ecomus-subscribe-box__description {
+	margin: 0 0 25px;
+}
+
+.ecomus-subscribe-box__currency-language {
+	gap: 45px;
+	margin-top: 24px;
+}
+
+.ecomus-subscribe-box__dropdown-position-top {
+	.ecomus-currency-language {
+		.current {
+			color: var(--em-color__dark);
+			&:before {
+				bottom: auto;
+				top: -8px;
+			}
+		}
+		.currency-dropdown {
+			top: auto;
+			bottom: 100%;
+		}
+	}
+}
